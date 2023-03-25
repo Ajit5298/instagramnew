@@ -1,0 +1,97 @@
+#sign-up
+{
+    height: 640px;
+    width:350px;
+    border:1px solid #f2f2f2;
+    margin: auto;
+}
+#img img
+{
+    width: 220px;
+    height: 90px;
+
+}
+#text1
+{
+    opacity: 0.6;
+}
+#button
+{
+    width: 90%;
+    height: 35px;
+    background-color: #4cb5f9;
+    border-radius: 8px;
+   color: white;
+   margin-bottom: 10px;
+   border: none;
+}
+
+#input
+{
+    width: 80%;
+    height: 35px;
+    margin: 10px;
+
+}
+#text2
+{
+    font-size: 12px;
+    margin: 20px;
+    opacity: 0.5px;
+}
+
+
+
+
+/* ------------------ Login--------------------- */
+#login
+{
+    height: 400px;
+    width:400px;
+    border:1px solid red;
+    margin-top: 100px;
+}
+
+
+
+
+
+/* ------------------ Footer--------------------- */
+#foot{
+    height:5vh;
+    width:60%;
+    /* border: 1px solid black; */
+    display: flex;
+    margin-left: 300px;
+}
+
+#foot>div{
+    /* width:5%; */
+    height:5vh;
+    /* border: 1px solid black; */
+    margin-left: 15px;
+    font-size: 12px;
+    opacity:0.8;
+    text-wrap:nowrap;
+}
+
+#language{
+    margin-left: 40%;
+
+}
+#language>select{
+    margin: none;
+    outline: none;
+    Border: none;
+    opacity:0.8;
+    font-size: 12px;
+}
+
+#language>small{
+    opacity:0.8;
+    font-size: 12px;
+}
+
+
+
+
