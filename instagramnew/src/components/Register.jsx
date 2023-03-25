@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import HomePage from "./HomePage";
+import Footer from "./Footer";
 import toast from "react-hot-toast";
 import "./Compnent.css";
 
@@ -78,7 +79,11 @@ function Regiater() {
                         </div>
                     </div>
                 </div>
+                <div id="div2">
+                    <p>Have an Account? Log in</p>
+                </div>
             </center>
+            <Footer/>
         </div>
     );
 }
