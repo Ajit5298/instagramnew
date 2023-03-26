@@ -179,9 +179,9 @@
 
 #profileinfo
 {
-    width: 100%;
+    width: 55%;
     height: 250px;
-    border: 1px solid red;
+    border-bottom: 1px solid #e3e3e3;
     margin-left: 200px;
     margin-right: 100px;
     display: flex;
@@ -190,7 +190,7 @@
 {
     width:35% ;
     height:250px ;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 #pic
 {
@@ -205,14 +205,14 @@
 {
     width:65% ;
     height:250px ;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     
 }
 #infodiv
 {
     width: 80%;
     height: 50px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin-top: 50px;
    
 }
@@ -225,12 +225,14 @@
     border-radius: 5px;
     border: none;
 }
-#div2
+#divF
 {
-    width: 100%;
+    width: 60%;
     height: 50px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
-    justify-content: ;
+    justify-content: space-between;
+
+  
    
 }

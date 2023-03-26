@@ -16,11 +16,14 @@ function Profile() {
                         <span>ajit_rajkumar_kamble</span>
                         <button id="edit">Edit Profile</button>
                     </div>
-                    <div id="div2">
+                    <div id="divF">
                         <div>35 posts</div>
                         <div>326 followers</div>
                         <div>325 following</div>
 
+                    </div>
+                    <div>
+                        <h4>Ajit Rajkumar Kamble</h4>
                     </div>
 
 
