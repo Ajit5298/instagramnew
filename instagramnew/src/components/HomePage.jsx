@@ -5,9 +5,8 @@ function Homepage() {
   return (
     <div id="homePage">
       <Sidebar />
-      <div>
-        
-       
+      <div id="profileinfo">
+         
       </div>
      
     </div>
