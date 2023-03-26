@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import HomePage from "./HomePage";
 import toast from "react-hot-toast";
+import "./Compnent.css";
+import Footer from "./Footer";
 
 function Login() {
     const [formData, setFormData] = useState({ email: "", password: "" });
@@ -52,23 +54,35 @@ function Login() {
 
                     <div>
                         <form>
-                            <input type="email" placeholder="Email" onChange={(e) => { featchData(e); }} name="email" required value={formData.email} /><br/>
-                            <input type="password" placeholder="Password" onChange={(e) => { featchData(e); }} name="password" required value={formData.password} />
+                            <input id="input" type="email" placeholder="Email" onChange={(e) => { featchData(e); }} name="email" required value={formData.email} /><br/>
+                            <input id="input" type="password" placeholder="Password" onChange={(e) => { featchData(e); }} name="password" required value={formData.password} />
                         </form>
                     </div>
 
                     <div>
-                        <button onClick={(e) => { checkLog(e); }}> Continue </button>
+                        <button  id="button" onClick={(e) => { checkLog(e); }}> Continue </button>
                         <p className="tc"> ---------------OR------------------ </p>
                     </div>
+                    <div>
+                        <p>Log in With Facebook</p>
+                    </div>
+                </div>
+                <div id="div2">
+                    <p>Dont have an Account? sign Up</p>
                 </div>
             </div>
+            
             </center>
-
+            <Footer/>
+            
+            
             
         </div>
+     
 
     );
+
 }
+
 
 export default Login;

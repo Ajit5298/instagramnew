@@ -1,21 +1,17 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import toast from "react-hot-toast";
+import "./Compnent.css";
+import Sidebar from "./Sidebar";
 
-
-function HomePage(){
-
-
-
-
-    return(
-       
-        <>
-
-        <h1>home</h1>
-
+function Homepage() {
+  return (
+    <div id="homePage">
+      <Sidebar />
+      <div>
         
-        </>
-    )
+       
+      </div>
+     
+    </div>
+  );
 }
-export default HomePage;
+
+export default Homepage;
