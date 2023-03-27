@@ -19,6 +19,7 @@ function App() {
         <Route excat path='/footer' element={<Footer/>} />
         <Route excat path='/' element={<HomePage/>} />
         <Route excat path='/profile' element={<Profile/>} />
+        <Route excat path='/addpost' element={<AddPost/>} />
         
         </Routes>
 
