@@ -44,7 +44,7 @@ function Login() {
         <div>
             <center>
             
-            <div id="login">
+            <div id="logind">
                 <div className="login-page">
                 <div id="img">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png" />

@@ -20,10 +20,10 @@ function Footer() {
         </div>
         <div id="language">
           <select>
-              <option>English</option>
+              <option>मराठी</option>
               <option>Hindi</option>
-              <option>Danish</option>
-              <option>Polaski</option>
+              <option>English</option>
+              <option>Kannada</option>
           </select>
           <small>&nbsp;&nbsp;&copy;2023 Instagram from Meta</small>
   

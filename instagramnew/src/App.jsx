@@ -8,6 +8,8 @@ import Footer from './components/Footer';
 
 import Sidebar from './components/Sidebar';
 import Profile from './components/Profile';
+import Addstory from './components/Addstory';
+
 function App() {
   return (
     <>
@@ -20,6 +22,10 @@ function App() {
         <Route excat path='/' element={<HomePage/>} />
         <Route excat path='/profile' element={<Profile/>} />
         <Route excat path='/addpost' element={<AddPost/>} />
+        <Route excat path='/addstory' element={<Addstory/>} />
+        
+      
+
         
         </Routes>
 
