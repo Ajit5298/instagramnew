@@ -1,90 +1,137 @@
-
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import HomePage from "./HomePage";
-import Footer from "./Footer";
-import toast from "react-hot-toast";
 import "./Compnent.css";
+import { useNavigate } from "react-router-dom";
+import toast  from "react-hot-toast";
+import Footer from "./Footer";
 
-function Regiater() {
-    const [instaUserData, setUserData] = useState({ name: "", email: "", userName: "", password: "", });
-    const router = useNavigate();
-    function submit(e) {
-        e.preventDefault();
+function Register() {
+  const[instaUserData, setUserData] =useState({email:'',name:'',username:'',password:''});
+  const route =useNavigate();
 
-        var dataFromLs = JSON.parse(localStorage.getItem("instaUserData")) || [];
+  function submit(e){
+    e.preventDefault();
 
-        var flag = false;
-        for (var i = 0; i < dataFromLs.length; i++) {
-            if (dataFromLs[i].email === instaUserData.email) {
-                flag = true;
-            }
-        }
-        if (flag) {
-            setUserData({ ...instaUserData, ["email"]: "" });
-            return toast.error("email already exsited");
-        } else if (instaUserData.password.length < 8) {
-            setUserData({ ...instaUserData, ["password"]: "" });
-            toast.error("password must be 8 characters");
-        } else {
-            dataFromLs.push(instaUserData);
-            localStorage.setItem("instaUserData", JSON.stringify(dataFromLs));
-            setUserData({ email: "", name: "", userName: "", password: "" });
-            router("/login");
-            toast.success("Registration done");
-        }
+
+    var dataFromLs =JSON.parse(localStorage.getItem("instaUserData")) || [];
+    var flag = false;
+
+    for(var i=0; i<dataFromLs.length; i++){
+      if(dataFromLs[i].email === instaUserData.email){
+        flag =true;
+      }
     }
 
-    function featchData(e) {
-        var value = e.target.value;
-        var name = e.target.name;
-
-        setUserData({ ...instaUserData, [name]: value });
+    if(flag){
+      setUserData({...instaUserData, email:''});
+      toast.error("Email already Present");
     }
-    return (
-        <div>
-            <center>
+    else if(instaUserData.password.length <8){
+      setUserData({...instaUserData, password:''})
+      toast.error("password should be of 8 characters");
+    }
+    else{
+      dataFromLs.push(instaUserData);
+      localStorage.setItem("instaUserData",JSON.stringify(dataFromLs));
+      setUserData({email:'',name:'',username:'',password:''});
+      route('/login');
+      toast.success("Signup Scucessful");
+    }
+  }
 
-                <div id="sign-up">
-                    <div className="signUp-page">
-                        <div onClick={() => { router("/"); }} >  </div>
-                        <div id="img">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png" />
-                        </div>
-                        <div>
-                            <div>
-                                <h3 id="text1">Sign up to see photos and videos from your friends</h3>
+  function formData(e){
+    var name= e.target.name;
+    var value= e.target.value;
 
-                            </div>
-                            <div>
-                                <button id="button">Log In With Facebook<a href="https://www.facebook.com"></a> </button>
-                            </div>
+    setUserData({...instaUserData, [name]:value});
+  }
 
-                        </div>
-
-                        <div>
-                            <form>
-                                <input id="input" type="email" placeholder="Enter Your Email" onChange={(e) => { featchData(e) }} name="email" required value={instaUserData.email} /><br />
-                                <input id="input" type="text" placeholder="Full Name" onChange={(e) => { featchData(e); }} name="name" required value={instaUserData.name} /><br />
-                                <input id="input" type="text" placeholder="UserName" onChange={(e) => { featchData(e); }} name="userName" required value={instaUserData.userName} /><br />
-                                <input id="input" type="password" placeholder="Password" onChange={(e) => { featchData(e); }} name="password" required value={instaUserData.password} />
-                            </form>
-                        </div>
-
-                        <div>
-
-                            <p id="text2">People who use our service may have uploaded your contact information to Instagram</p>
-                            <p id="text2">By signing up, you agree to our Terms, Privacy Policy and Cookies Policy</p>
-                            <button id="button" onClick={(e) => submit(e)}>signUp</button>
-                        </div>
-                    </div>
-                </div>
-                <div id="div2">
-                    <p>Have an Account? Log in</p>
-                </div>
-            </center>
-            <Footer/>
+  return (
+    <div id="signup-fullpage">
+      <div id="signup">
+        <div id="signup-one">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/512px-Instagram_logo.svg.png"
+            alt=""
+          />
         </div>
-    );
+        <div id="signup-content-info">
+          <p>Sign up to see photos and videos from your friends.</p>
+        </div>
+        <div id="signup-five">
+          <div id="signup-five-one">
+            <div id="signup-five-f-one">
+              <i className="fa-brands fa-facebook"></i>
+            </div>
+            <div id="signup-five-f-two">
+              <p>Log in with facebook</p>
+            </div>
+          </div>
+        </div>
+        <div id="signup-three">
+          <fieldset>
+            <legend>OR</legend>
+          </fieldset>
+        </div>
+        <div id="signup-two">
+          <form onSubmit={(e) => {submit(e)}}>
+            <input name="email" type="email" placeholder="Enter your Email" onChange={(e) => {formData(e)}} value={instaUserData.email} required/>
+            <br />
+            <input name="name" type="text" placeholder="Enter your Full Name" onChange={(e) => {formData(e)}} value={instaUserData.name} required/>
+            <br />
+            <input
+              name="username"
+              type="text"
+              placeholder="Enter your username"
+              onChange={(e) => {formData(e)}}
+              value={instaUserData.username}
+              required 
+            />
+            <br />
+            <input
+              name="password"
+              type="password"
+              placeholder="Enter your password"
+              onChange={(e) => {formData(e)}}
+              value={instaUserData.password}
+              required 
+            />
+            <br />
+            <div id="signup-four">
+              <p>
+                People who use our service may have uploaded your contact
+                information to Instagram. Learn more
+              </p>
+            </div>
+            <div id="signup-content">
+              <p>
+                By signing up, you agree to our Terms, Privacy Policy and
+                Cookies Policy.
+              </p>
+            </div>
+            <input type="submit" value="Signup" />
+          </form>
+        </div>
+      </div>
+      <div className="login-bot">
+          <p>Get the app.</p>
+          <div>
+            <div>
+              <img
+                src="https://static.cdninstagram.com/rsrc.php/v3/yz/r/c5Rp7Ym-Klz.png"
+                alt="store"
+              />
+            </div>
+            <div>
+              <img
+                src="https://static.cdninstagram.com/rsrc.php/v3/yu/r/EHY6QnZYdNX.png"
+                alt="store"
+              />
+            </div>
+          </div>
+        </div>
+      <Footer/>
+    </div>
+  );
 }
-export default Regiater;
+
+export default Register;

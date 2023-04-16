@@ -83,7 +83,7 @@ const AddPost = () => {
           <div>
             <div className="post-bot-top">
               <div>
-                {/* <div id="post-back"></div> */}
+                <div id="post-back"></div>
                 <p>{userInfo && userInfo["currentUserName"]}</p>
               </div>
               <div>

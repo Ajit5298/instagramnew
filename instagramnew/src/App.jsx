@@ -1,32 +1,24 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom'
-import Regiater from './components/Register';
+import Register from './components/Register';
 import HomePage from './components/HomePage';
 import Login from './components/Login';
 import AddPost from './components/AddPost';
-import Footer from './components/Footer';
-
-import Sidebar from './components/Sidebar';
+import AddStory from './components/AddStory';
 import Profile from './components/Profile';
-import Addstory from './components/Addstory';
-
+import Search from './components/Search';
 function App() {
   return (
     <>
       <div>
         <Routes>
-        <Route excat path='/register' element={<Regiater/>} />
+        <Route excat path='/register' element={<Register/>}/>
         <Route excat path='/login' element={<Login/>} />
         <Route excat path='/addPost' element={<AddPost/>} />
-        <Route excat path='/footer' element={<Footer/>} />
-        <Route excat path='/' element={<HomePage/>} />
-        <Route excat path='/profile' element={<Profile/>} />
-        <Route excat path='/addpost' element={<AddPost/>} />
-        <Route excat path='/addstory' element={<Addstory/>} />
-        
-      
-
-        
+        <Route excat path='/addStory' element={<AddStory/>}/>
+        <Route excat path='/profile' element={<Profile/>}/>
+        <Route excat path='/homePage' element={<HomePage/>}/>
+        <Route excat path='/search' element={<Search/>}/>
         </Routes>
 
       </div>

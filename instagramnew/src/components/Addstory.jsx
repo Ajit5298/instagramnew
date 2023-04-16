@@ -63,7 +63,7 @@ const AddStory = () => {
                     >
                         <i className="fa-sharp fa-solid fa-arrow-left"></i>
                     </div>
-                    <div>Create New Story</div>
+                    <div>Create new Story</div>
                     <div
                         className="cursor"
                         onClick={() => {
@@ -75,7 +75,7 @@ const AddStory = () => {
                 </div>
                 <div className="post-mid">
                     <img
-                        src="https://tse1.mm.bing.net/th?id=OIP.oVnMcynepHTJgMoNTkbw-gHaHa&pid=Api&P=0"
+                        src="https://embedsocial.com/wp-content/uploads/2020/10/add-links-instagram-posts.jpg.webp"
                         alt="logo"
                     />
                 </div>
@@ -87,8 +87,24 @@ const AddStory = () => {
                                 <p>{userInfo && userInfo["currentUserName"]}</p>
                             </div>
                             <div>
-                                
-                                <input type="text" placeholder="Image Url" onChange={(e) => { fetchData(e);  }} name="image"value={spost.image}  />
+                                <input
+                                    type="text"
+                                    placeholder="Caption"
+                                    onChange={(e) => {
+                                        fetchData(e);
+                                    }}
+                                    name="caption"
+                                    value={spost.caption}
+                                />
+                                <input
+                                    type="text"
+                                    placeholder="Image Url"
+                                    onChange={(e) => {
+                                        fetchData(e);
+                                    }}
+                                    name="image"
+                                    value={spost.image}
+                                />
                             </div>
                         </div>
                         <div className="post-bot-bot">
