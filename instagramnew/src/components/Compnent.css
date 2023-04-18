@@ -290,6 +290,29 @@
     display: flex;
     width: 100%;
 }
+#div
+{
+    width:310px;
+    /* border: 1px solid red; */
+   
+}
+#edit
+{
+    margin-left: 10px;
+    border:none;
+    color: #158bda;
+    height: 30px;
+    width: 80px;
+}
+#name2
+{
+    padding-top: 10px ;
+}
+#infodiv
+{
+  justify-content: space-between;
+  padding: 10px;
+}
 
 .profile-Sidebar {
     width: 20%;
@@ -311,6 +334,28 @@
     border-bottom: 1px solid black;
     width: 800px;
 }
+#profileinfo
+{
+    display: flex;
+    padding: 30px;
+}
+#pic
+{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: no-repeat center center;
+    background-size: cover;
+    margin-right: 20px; 
+}
+#divF
+{
+    display: flex;
+    padding:10px 0px 10px 0px  ;
+    justify-content: space-between;
+    width: 100%;
+}
+
 
 .profile-image>img {
     width: 150px;
@@ -366,7 +411,7 @@
     height: 500px;
     background: no-repeat center center;
     background-size: cover;
-    display: flex;
+    /* display: flex; */
     flex-wrap: nowrap;
 }
 
